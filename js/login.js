@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loginResponse = await login(username, password);
 
         if (loginResponse === 'Login successful!') {
-            window.location.href = 'empleados.html';
+            window.location.href = '../pages/empleados.html';
         } else {
             document.getElementById('loginResponse').innerText = loginResponse;
         }

@@ -124,7 +124,6 @@ form button:hover {
 a {
     color: #1abc9c;
     text-decoration: none;
-    display: block;
     text-align: center;
     margin-top: 20px;
 }

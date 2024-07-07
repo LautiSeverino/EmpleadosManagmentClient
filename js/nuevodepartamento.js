@@ -19,7 +19,7 @@ document.getElementById('newDepartmentForm').addEventListener('submit', async fu
         }
 
         alert('Departamento creado con éxito');
-        window.location.href = 'departamentos.html';
+        window.location.href = '../pages/departamentos.html';
     } catch (error) {
         console.error('Error:', error);
         alert('Error al crear el departamento');

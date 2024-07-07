@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const searchBtn = document.getElementById('searchBtn');
 
     newEmployeeBtn.addEventListener('click', () => {
-        window.location.href = 'nuevoempleado.html';
+        window.location.href = '../pages/nuevoempleado.html';
     });
 
     searchBtn.addEventListener('click', async () => {

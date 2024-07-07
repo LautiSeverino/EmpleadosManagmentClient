@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const registerResponse = await register(newUsername, newUserEmail, newUserPhone, newPassword);
         if (registerResponse === 'Registration successful!') {
-            window.location.href = 'login.html';
+            window.location.href = '../index.html';
         } else {
             document.getElementById('registerResponse').innerText = registerResponse;
         }

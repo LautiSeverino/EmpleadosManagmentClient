@@ -95,7 +95,7 @@ window.onload = async function() {
                 throw new Error('Failed to update employee');
             }
 
-            window.location.href = 'empleados.html';
+            window.location.href = '../pages/empleados.html';
         } catch (error) {
         }
     };

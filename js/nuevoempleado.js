@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('authToken');
     if (!token) {
-        window.location.href = 'login.html';
+        window.location.href = '../index.html';
         return;
     }
 
@@ -71,7 +71,7 @@ async function createEmpleado() {
             throw new Error('Failed to create employee');
         }
 
-        window.location.href = 'empleados.html';
+        window.location.href = '../pages/empleados.html';
     } catch (error) {
         console.error('Error:', error);
     }

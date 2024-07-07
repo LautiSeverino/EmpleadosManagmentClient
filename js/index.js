@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function login(username, password) {
     try {
-        const response = await fetch('http://www.apiblazorempleados.somee.com/api/Login/Login', {
+        const response = await fetch('https://www.apiblazorempleados.somee.com/api/Login/Login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

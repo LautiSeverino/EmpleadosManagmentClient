@@ -9,7 +9,7 @@ window.onload = async function() {
                 throw new Error('Authentication token not found');
             }
 
-            const response = await fetch(`http://apiblazorempleados.somee.com/api/Empleado/GetByNroDocumento/${nroDocumento}`, {
+            const response = await fetch(`https://apiblazorempleados.somee.com/api/Empleado/GetByNroDocumento/${nroDocumento}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
@@ -39,7 +39,7 @@ window.onload = async function() {
             throw new Error('Authentication token not found');
         }
 
-        const response = await fetch('http://apiblazorempleados.somee.com/api/Departamento/GetAll', {
+        const response = await fetch('https://apiblazorempleados.somee.com/api/Departamento/GetAll', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
@@ -82,7 +82,7 @@ window.onload = async function() {
                 throw new Error('Authentication token not found');
             }
 
-            const response = await fetch(`http://apiblazorempleados.somee.com/api/Empleado/Update/${nroDocumento}`, {
+            const response = await fetch(`https://apiblazorempleados.somee.com/api/Empleado/Update/${nroDocumento}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

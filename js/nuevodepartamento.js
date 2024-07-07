@@ -5,7 +5,7 @@ document.getElementById('newDepartmentForm').addEventListener('submit', async fu
 
     try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch('http://www.apiblazorempleados.somee.com/api/Departamento/Create', {
+        const response = await fetch('https://www.apiblazorempleados.somee.com/api/Departamento/Create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

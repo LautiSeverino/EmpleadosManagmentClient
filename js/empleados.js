@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Check if searchInput is numeric (assumed to be a nroDocumento)
             if (!isNaN(searchInput)) {
-                searchUrl = `http://www.apiblazorempleados.somee.com/api/Empleado/GetByNroDocumento/${searchInput}`;
+                searchUrl = `https://www.apiblazorempleados.somee.com/api/Empleado/GetByNroDocumento/${searchInput}`;
             } else {
-                searchUrl = `http://www.apiblazorempleados.somee.com/api/Empleado/GetByNombre/${searchInput}`;
+                searchUrl = `https://www.apiblazorempleados.somee.com/api/Empleado/GetByNombre/${searchInput}`;
             }
 
             const response = await fetch(searchUrl, {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function fetchEmployees() {
     try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch('http://www.apiblazorempleados.somee.com/api/Empleado/GetAll', {
+        const response = await fetch('https://www.apiblazorempleados.somee.com/api/Empleado/GetAll', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
@@ -128,7 +128,7 @@ function editEmployee(nroDocumento) {
 async function deleteEmployee(nroDocumento) {
     try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch(`http://www.apiblazorempleados.somee.com/api/Empleado/Delete/${nroDocumento}`, {
+        const response = await fetch(`https://www.apiblazorempleados.somee.com/api/Empleado/Delete/${nroDocumento}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function fetchDepartamentos() {
     try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch('http://www.apiblazorempleados.somee.com/api/Departamento/GetAll', {
+        const response = await fetch('https://www.apiblazorempleados.somee.com/api/Departamento/GetAll', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
@@ -57,7 +57,7 @@ async function createEmpleado() {
             fechaContrato: formData.get('fechaContrato')
         };
 
-        const response = await fetch('http://www.apiblazorempleados.somee.com/api/Empleado/Create', {
+        const response = await fetch('https://www.apiblazorempleados.somee.com/api/Empleado/Create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

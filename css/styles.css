@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+
+
+.sidebar h2 {
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li button:hover {
+    background-color: #1abc9c;
+}
+
+#toggleButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleButton:hover {
+    background-color: #1abc9c;
+}
+
+a.opt-menu{
+    margin: 0;
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.content h1 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; 
+}
+
+form button:hover {
+    background-color: #1abc9c;
+}
+
+#loginResponse, #registerResponse {
+    margin-top: 20px;
+    color: red;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a.button-link:hover {
+    background-color: #1abc9c;
+}
+
+#employeeTable, #departamentoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#employeeTable th, #employeeTable td, #departamentoTable th, #departamentoTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#employeeTable th, #departamentoTable th {
+    background-color: #34495e;
+    color: white;
+}
+
+#employeeTable tbody tr:nth-child(even), #departamentoTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#employeeTable tbody tr:hover, #departamentoTable tbody tr:hover {
+    background-color: #ddd;
+    transition: .2s;
+}
+
+#employeeTable td button, #departamentoTable td.actions button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#employeeTable td button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#employeeTable td button.delete:hover {
+    background-color: #c0392b;
+}
+
+#employeeTable td button.edit, #departamentoTable td.actions button {
+    background-color: #3498db;
+    color: white;
+}
+
+#employeeTable td button.edit:hover, #departamentoTable td.actions button:hover {
+    background-color: #2980b9;
+}
+
+.new-employee-button, .new-department-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #19dd5e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.new-employee-button:hover, .new-department-button:hover {
+    background-color: #2ecc71;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+    width: 32%;
+}
+
+#searchInput {
+    flex: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; 
+    outline: none; 
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #0056b3;
+    transition: .3s;
+}

@@ -1,0 +1,82 @@
+/* mediaqueries.css */
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px; 
+        padding: 15px; 
+    }
+
+    .sidebar h2 {
+        padding-bottom: 15px; 
+    }
+
+    #searchInput {
+        font-size: 14px; 
+    }
+
+    #searchBtn {
+        padding: 8px 16px; 
+    }
+
+    
+    .content {
+        padding: 15px; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table th, table td {
+        padding: 10px; 
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #34495e;
+        color: white;
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tbody tr:hover {
+        background-color: #ddd;
+        transition: .2s;
+    }
+
+    table td button {
+        padding: 6px 10px; 
+        margin-right: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .new-button {
+        padding: 8px 16px; 
+        background-color: #19dd5e;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .new-button:hover {
+        background-color: #2ecc71;
+    }
+
+    
+    .content table {
+        overflow-x: auto;
+    }
+}

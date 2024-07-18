@@ -26,11 +26,13 @@ window.onload = async function() {
             document.getElementById('nombreCompleto').value = empleado.nombreCompleto;
             document.getElementById('idDepartamento').value = empleado.idDepartamento;
             document.getElementById('sueldo').value = empleado.sueldo;
-            document.getElementById('fechaContrato').value = empleado.fechaContrato.slice(0, 10); 
+            
+            // Convert the date from dd/MM/yyyy to YYYY-MM-DD
+            const formattedDate = formatDateForInput(empleado.fechaContrato);
+            document.getElementById('fechaContrato').value = formattedDate;
         } catch (error) {
-            console.error('Error fetching:', error);
+            console.error('Error fetching employee data:', error);
         }
-    } else {
     }
 
     try {
@@ -60,9 +62,9 @@ window.onload = async function() {
             selectDepartamento.appendChild(option);
         });
     } catch (error) {
+        console.error('Error fetching departments:', error);
     }
 
-    // Handle form submission as before
     const editEmployeeForm = document.getElementById('editEmployeeForm');
     editEmployeeForm.onsubmit = async function(event) {
         event.preventDefault();
@@ -73,7 +75,7 @@ window.onload = async function() {
             idDepartamento: parseInt(formData.get('idDepartamento')),
             sueldo: parseInt(formData.get('sueldo')),
             nroDocumento: nroDocumento,
-            fechaContrato: new Date(formData.get('fechaContrato')).toISOString(),
+            fechaContrato: formData.get('fechaContrato'),
         };
 
         try {
@@ -97,6 +99,13 @@ window.onload = async function() {
 
             window.location.href = '../pages/empleados.html';
         } catch (error) {
+            console.error('Error updating employee:', error);
         }
     };
+
+    function formatDateForInput(dateString) {
+        // Convert dd/MM/yyyy to YYYY-MM-DD
+        const [day, month, year] = dateString.split('/');
+        return `${year}-${month}-${day}`;
+    }
 };
